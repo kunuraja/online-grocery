@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "02d04a02-4b38-4755-a358-fe997041c6f6",
+		"name": "online-grocery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11595394",
+		"_collection_link": "https://galactic-firefly-715314.postman.co/workspace/crio-coderhack~956b42b3-e470-4337-a0d0-7cb09c311f36/collection/11595394-02d04a02-4b38-4755-a358-fe997041c6f6?action=share&source=collection_link&creator=11595394"
+	},
+	"item": [
+		{
+			"name": "createCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"raj2\",\r\n    \"email\" : \"rm@gmail.com\",\r\n    \"address\" : \"jkr\",\r\n    \"phone\" : \"1234567892\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customer"
+			},
+			"response": []
+		},
+		{
+			"name": "addGrocery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"rice\",\r\n    \"category\": \"cat1\",\r\n    \"price\": 100,\r\n    \"quantity\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/groceries"
+			},
+			"response": []
+		},
+		{
+			"name": "giveOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groceryIds\": [\r\n        1\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/customers/1/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteOrder",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/customers/1/orders/1"
+			},
+			"response": []
+		}
+	]
+}
